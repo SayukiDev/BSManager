@@ -1,0 +1,19 @@
+{
+	"fixed": {
+		"file_version": "{{.Info.ProductVersion}}",
+		"product_version": "{{.Info.ProductVersion}}"
+	},
+	"info": {
+		"0000": {
+			"ProductVersion": "{{.Info.ProductVersion}}",
+			"CompanyName": "{{.Info.CompanyName}}",
+			"FileDescription": "{{.Info.ProductName}}",
+			"FileVersion": "{{.Info.ProductVersion}}",
+			"InternalName": "{{.Name}}",
+			"OriginalFilename": "{{.Name}}.exe",
+			"LegalCopyright": "{{.Info.Copyright}}",
+			"ProductName": "{{.Info.ProductName}}",
+			"Comments": "{{.Info.Comments}}"
+		}
+	}
+}

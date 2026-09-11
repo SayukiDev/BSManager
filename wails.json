@@ -1,0 +1,21 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "BSManager",
+  "outputfilename": "BSManager",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "wailsjsdir": "./frontend",
+  "author": {
+    "name": "Sayuki"
+  },
+  "info": {
+    "companyName": "SayukiDev",
+    "productName": "BSManager",
+    "productVersion": "0.0.1",
+    "copyright": "Copyright © 2026 SayukiDev",
+    "comments": "SteamVR の起動状態に合わせて Lighthouse ベースステーションの電源を管理するツール"
+  },
+  "nsisType": "multiple"
+}
