@@ -9,16 +9,16 @@ Valve BaseStation電源制御用ツール
 - 単一ベースステーションの手動オン・オフ制御
 
 ## 使用
-1. Releasesからインストーラーをダウンロードする
+1. [Releases](https://github.com/SayukiDev/BSManager/releases) からインストーラーをダウンロードする
 2. インストールする
-3. BSManagerを起動する
+3. BSManager を起動する
 4. セットアップ画面に従ってベースステーションのスキャン・登録を行う
 
 ## 必須条件
 - Windows 10 以上
 - ブルートゥースレシーバーが接続されてる
 
-##
+## ビルド
 ``` bash
 # 通常ビルド
 wails build
