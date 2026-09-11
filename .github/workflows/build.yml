@@ -30,6 +30,13 @@ jobs:
       - name: Install Wails CLI
         run: go install github.com/wailsapp/wails/v2/cmd/wails@${{ env.WAILS_VERSION }}
 
+      - name: Install NSIS
+        shell: pwsh
+        run: |
+          choco install nsis -y --no-progress
+          Add-Content $env:GITHUB_PATH "${env:ProgramFiles(x86)}\NSIS"
+          & "${env:ProgramFiles(x86)}\NSIS\makensis.exe" /VERSION
+
       - name: Build frontend
         working-directory: frontend
         run: |
@@ -44,6 +51,12 @@ jobs:
 
       - name: Build
         run: wails build -clean -s -platform windows/amd64 -nsis
+
+      - name: Verify build output
+        shell: pwsh
+        run: |
+          Get-ChildItem build/bin
+          if (-not (Test-Path build/bin/BSManager-amd64-installer.exe)) { throw "installer was not generated" }
 
       - name: Package
         shell: pwsh
