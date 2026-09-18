@@ -47,6 +47,13 @@ func (s *Service) Start() error {
 		log.Info("setup is not completed, manager is not started")
 		return nil
 	}
+	// Scan 10 sec to avoid trouble
+	go func() {
+		err := bs.ScanningWithTimeout(10 * time.Second)
+		if err != nil {
+			log.Error("scan failed", zap.Error(err))
+		}
+	}()
 	return s.M.Start()
 }
 
