@@ -49,10 +49,12 @@ func (s *Service) Start() error {
 	}
 	// Scan 10 sec to avoid trouble
 	go func() {
+		s.scanning.Store(true)
 		err := bs.ScanningWithTimeout(10 * time.Second)
 		if err != nil {
 			log.Error("scan failed", zap.Error(err))
 		}
+		s.scanning.Store(false)
 	}()
 	return s.M.Start()
 }
