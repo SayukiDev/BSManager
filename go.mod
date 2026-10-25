@@ -3,7 +3,7 @@ module BSManager
 go 1.26
 
 require (
-	github.com/SayukiDev/BasestationApiGo v0.0.0-20260911081433-e77ad874a1a1
+	github.com/SayukiDev/BasestationApiGo v0.0.0-20261024203912-e1430c1834de
 	github.com/energye/systray v1.0.3
 	github.com/wailsapp/wails/v2 v2.10.1
 	go.uber.org/zap v1.28.0
